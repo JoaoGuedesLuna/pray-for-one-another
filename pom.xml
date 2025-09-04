@@ -6,7 +6,7 @@
 
     <groupId>dev.guedes</groupId>
     <artifactId>pray-for-one-another</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
