@@ -2,6 +2,7 @@ package dev.guedes.prayforoneanother;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
+import dev.guedes.prayforoneanother.validators.NotBlankValidator;
 import dev.guedes.prayforoneanother.validators.NotNullValidator;
 import dev.guedes.prayforoneanother.validators.ValidatorComposite;
 
@@ -17,5 +18,6 @@ public class ApplicationModule extends AbstractModule {
     protected void configure() {
         bind(ValidatorComposite.class);
         bind(NotNullValidator.class).in(Singleton.class);
+        bind(NotBlankValidator.class).in(Singleton.class);
     }
 }
