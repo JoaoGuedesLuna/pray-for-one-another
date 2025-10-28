@@ -4,6 +4,8 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
 import dev.guedes.prayforoneanother.mappers.PersonMapper;
 import dev.guedes.prayforoneanother.mappers.impl.PersonMapperImpl;
+import dev.guedes.prayforoneanother.services.PrayerDrawService;
+import dev.guedes.prayforoneanother.services.impl.PrayerDrawServiceImpl;
 import dev.guedes.prayforoneanother.validators.NotBlankValidator;
 import dev.guedes.prayforoneanother.validators.NotNullValidator;
 import dev.guedes.prayforoneanother.validators.PersonNameValidator;
@@ -25,5 +27,7 @@ public class ApplicationModule extends AbstractModule {
         bind(PersonNameValidator.class).in(Singleton.class);
 
         bind(PersonMapper.class).to(PersonMapperImpl.class).in(Singleton.class);
+
+        bind(PrayerDrawService.class).to(PrayerDrawServiceImpl.class).in(Singleton.class);
     }
 }
