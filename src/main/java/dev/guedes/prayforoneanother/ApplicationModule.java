@@ -1,6 +1,7 @@
 package dev.guedes.prayforoneanother;
 
 import com.google.inject.AbstractModule;
+import dev.guedes.prayforoneanother.validators.ValidatorComposite;
 
 /**
  * Guice configuration module for the application.
@@ -11,5 +12,7 @@ import com.google.inject.AbstractModule;
  */
 public class ApplicationModule extends AbstractModule {
     @Override
-    protected void configure() {}
+    protected void configure() {
+        bind(ValidatorComposite.class);
+    }
 }
