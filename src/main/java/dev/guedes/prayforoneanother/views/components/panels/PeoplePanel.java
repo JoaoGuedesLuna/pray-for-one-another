@@ -2,6 +2,7 @@ package dev.guedes.prayforoneanother.views.components.panels;
 
 import com.google.inject.Inject;
 import dev.guedes.prayforoneanother.views.factories.UIComponentFactory;
+import dev.guedes.prayforoneanother.views.components.cards.PersonCard;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -41,7 +42,7 @@ public class PeoplePanel extends JPanel {
         JPanel nameInputPanel = new JPanel(new BorderLayout(5, 5));
         nameInputPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
-        this.nameField = UIComponentFactory.createTextField(null, e -> onAddPerson());
+        this.nameField    = UIComponentFactory.createTextField(null, e -> onAddPerson());
         JButton addButton = UIComponentFactory.createButton("Add", e -> onAddPerson());
 
         nameInputPanel.add(nameField, BorderLayout.CENTER);
@@ -67,7 +68,7 @@ public class PeoplePanel extends JPanel {
         if (!name.isEmpty()) {
             nameField.setText("");
             peopleList.add(name);
-            // TODO: Add PersonCard
+            cardsPanel.add(new PersonCard(cardsPanel, peopleList, name));
             cardsPanel.revalidate();
             cardsPanel.repaint();
         }
