@@ -1,8 +1,11 @@
 package dev.guedes.prayforoneanother.views;
 
 import dev.guedes.prayforoneanother.views.components.frames.Frame;
+import dev.guedes.prayforoneanother.views.components.panels.PeoplePanel;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Main application window for the program.
@@ -20,7 +23,9 @@ public class MainView extends Frame implements View {
     public MainView() {
         super(700, 500);
 
-        JPanel leftPanel = null;
+        List<String> peopleList = new ArrayList<>();
+
+        JPanel leftPanel = new PeoplePanel(peopleList);
         JPanel rightPanel = null;
 
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftPanel, rightPanel);
