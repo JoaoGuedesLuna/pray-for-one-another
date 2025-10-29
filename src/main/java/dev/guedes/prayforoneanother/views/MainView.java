@@ -1,6 +1,9 @@
 package dev.guedes.prayforoneanother.views;
 
+import dev.guedes.prayforoneanother.ApplicationInjector;
+import dev.guedes.prayforoneanother.services.PrayerDrawService;
 import dev.guedes.prayforoneanother.views.components.frames.Frame;
+import dev.guedes.prayforoneanother.views.components.panels.DrawPanel;
 import dev.guedes.prayforoneanother.views.components.panels.PeoplePanel;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
@@ -23,10 +26,11 @@ public class MainView extends Frame implements View {
     public MainView() {
         super(700, 500);
 
+        PrayerDrawService prayerDrawService = ApplicationInjector.getInstance(PrayerDrawService.class);
         List<String> peopleList = new ArrayList<>();
 
         JPanel leftPanel = new PeoplePanel(peopleList);
-        JPanel rightPanel = null;
+        JPanel rightPanel = new DrawPanel(prayerDrawService, peopleList);
 
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftPanel, rightPanel);
         splitPane.setDividerLocation(300);
