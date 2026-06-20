@@ -25,17 +25,26 @@
 <hr>
 
 <h2>🚀 How to Run</h2>
-<h3>Using an IDE (e.g., IntelliJ, Eclipse)</h3>
+
+<h3>Using an IDE (e.g., IntelliJ IDEA, Eclipse)</h3>
 <ol>
-  <li>Clone or download this repository.</li>
-  <li>Open the project in your Java IDE.</li>
+  <li>Clone this repository:</li>
+</ol>
+<pre><code>git clone https://github.com/JoaoGuedesLuna/pray-for-one-another.git</code></pre>
+<ol start="2">
+  <li>Open the project in your preferred Java IDE.</li>
   <li>Run the <code>dev.guedes.prayforoneanother.PrayForOneAnotherApplication</code> class.</li>
 </ol>
 
 <h3>Using the Executable JAR</h3>
 <ol>
-  <li>Navigate to the <code>/dist</code> folder.</li>
-  <li>Double-click the <code>pray-for-one-another-1.0.jar</code> file or run it via terminal:<br>
-        <code>java -jar .\dist\pray-for-one-another-1.0.jar</code>
-  </li>
+  <li>Download the latest version from the project's <strong>Releases</strong> page.</li>
+  <li>Open a terminal in the directory where the JAR was downloaded.</li>
+  <li>Run the application:</li>
 </ol>
+<pre><code>java -jar pray-for-one-another-1.0.0-all.jar</code></pre>
+
+<p>
+  Alternatively, if Java is properly installed and associated with JAR files on your system,
+  you can launch the application by double-clicking the JAR file.
+</p>
